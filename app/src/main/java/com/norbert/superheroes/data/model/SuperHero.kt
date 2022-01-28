@@ -2,7 +2,7 @@ package com.norbert.superheroes.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Character(
+data class SuperHero(
     val appearance: Appearance,
     val biography: Biography,
     val connections: Connections,

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SuperHeroes</string>
+    <string name="foto_del_super_heroe_description">Foto del Super Heroe</string>
+    <string name="hint_super_heroe_name">Super Heroe Name</string>
 </resources>

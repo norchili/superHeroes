@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+
+        <ImageView
+            android:id="@+id/ivSuperHeroImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="15dp"
+            android:contentDescription="@string/foto_del_super_heroe_description"/>
+
+    <TextView
+        android:id="@+id/tvSuperHeroName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:hint="@string/hint_super_heroe_name"
+        android:textColorHint="#757575"
+        android:textAlignment="textStart"
+        android:textSize="14sp" />
+
+
+</LinearLayout>
