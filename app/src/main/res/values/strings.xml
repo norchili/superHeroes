@@ -39,4 +39,15 @@
     <string name="eye_color_example">Blue</string>
     <string name="hair_color">Hair color</string>
     <string name="hair_color_example">Black</string>
+    <string name="work">Work</string>
+    <string name="occupation">Occupation</string>
+    <string name="occupation_example">Inventor, Industrialist; former United States Secretary of Defense</string>
+    <string name="base">Base</string>
+    <string name="base_example">Seattle, Washington</string>
+    <string name="group_affiliation">Group Affiliation</string>
+    <string name="group_affiliation_example">Avengers, Illuminati, Stark Resilient; formerly S.H.I.E.L.D., leader of Stark Enterprises, the Pro-Registration Superhero Unit, New Avengers, Mighty Avengers, Hellfire Club, Force Works, Avengers West Coast, United States Department of Defense.</string>
+    <string name="connections">Connections</string>
+    <string name="relatives">Relatives</string>
+    <string name="relatives_example">Howard Anthony Stark (father, deceased), Maria Stark (mother, deceased), Morgan Stark (cousin), Isaac Stark (ancestor)</string>
+    <string name="empty">-</string>
 </resources>

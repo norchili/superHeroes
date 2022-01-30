@@ -51,7 +51,6 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="10dp">
                         <TextView
-                            android:id="@+id/tvIntelligenceLock"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="11sp"
@@ -63,8 +62,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:textSize="11sp"
-                            android:hint="@string/valor"
-                            android:textColor="@color/black"
+                            android:hint="@string/empty"
+                            android:textColor="@color/purple_700"
                             app:layout_constraintTop_toBottomOf="@+id/tvName"
                             app:layout_constraintStart_toEndOf="@+id/tvIntelligenceLock"/>
                     </LinearLayout>
@@ -74,7 +73,6 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="5dp">
                         <TextView
-                            android:id="@+id/tvStrengthLock"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="11sp"
@@ -86,8 +84,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:textSize="11sp"
-                            android:hint="@string/valor"
-                            android:textColor="@color/black"/>
+                            android:hint="@string/empty"
+                            android:textColor="@color/purple_700"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -96,7 +94,6 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="5dp">
                         <TextView
-                            android:id="@+id/tvSpeedLock"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="11sp"
@@ -108,8 +105,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:textSize="11sp"
-                            android:hint="@string/valor"
-                            android:textColor="@color/black"/>
+                            android:hint="@string/empty"
+                            android:textColor="@color/purple_700"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -118,7 +115,6 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="5dp">
                         <TextView
-                            android:id="@+id/tvDurabilityLock"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="11sp"
@@ -130,8 +126,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:textSize="11sp"
-                            android:hint="@string/valor"
-                            android:textColor="@color/black"/>
+                            android:hint="@string/empty"
+                            android:textColor="@color/purple_700"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -140,7 +136,6 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="5dp">
                         <TextView
-                            android:id="@+id/tvPowerLock"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="11sp"
@@ -152,8 +147,8 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:textSize="11sp"
-                            android:hint="@string/valor"
-                            android:textColor="@color/black"/>
+                            android:hint="@string/empty"
+                            android:textColor="@color/purple_700"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -162,7 +157,6 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="5dp">
                         <TextView
-                            android:id="@+id/tvCombatLock"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="11sp"
@@ -174,31 +168,26 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:textSize="11sp"
-                            android:hint="@string/valor"
-                            android:textColor="@color/black"/>
+                            android:hint="@string/empty"
+                            android:textColor="@color/purple_700"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
 
             <TextView
-                android:id="@+id/tvBiographyLock"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/biography"
                 android:textColor="@color/purple_700"
                 android:layout_marginStart="10dp"
-                android:textSize="14sp"
-                android:textStyle="bold"/>
+                android:textSize="14sp"/>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvBiography"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/tvBiographyLock"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:cardCornerRadius="10dp"
                 android:layout_margin="10dp">
 
@@ -219,9 +208,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvFullName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/full_name_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
@@ -236,9 +226,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvAlterEgos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/alter_egos_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
 
                         android:layout_marginStart="10dp"
@@ -253,9 +244,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvAliases"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/alias_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
@@ -270,9 +262,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvPlaceOfBirth"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/place_of_birth_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
@@ -287,9 +280,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvFirstAppearance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/first_appearance_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
 
                         android:layout_marginStart="10dp"
@@ -305,9 +299,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvPublisher"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/publisher_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
@@ -322,9 +317,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvAlignment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/alignment_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
@@ -337,26 +333,18 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/tvAppearanceLock"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/appearance"
                 android:textColor="@color/purple_700"
                 android:layout_marginStart="10dp"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/cvBiography"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:textSize="14sp"/>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvAppearance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/tvAppearanceLock"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:cardCornerRadius="10dp"
                 android:layout_margin="10dp">
 
@@ -376,9 +364,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvGender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/gender_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
@@ -393,9 +382,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvRace"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/race_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
@@ -410,9 +400,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvHeight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/height_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
@@ -426,9 +417,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvWeight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/weight_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
@@ -443,9 +435,10 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvEyeColor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/eye_color_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
@@ -459,15 +452,140 @@
                         android:textSize="11sp"/>
 
                     <TextView
+                        android:id="@+id/tvHairColor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/hair_color_example"
+                        android:hint="@string/empty"
                         android:textColor="@color/purple_200"
                         android:layout_marginStart="10dp"
                         android:textSize="12sp"/>
 
                 </LinearLayout>
 
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/work"
+                android:textColor="@color/purple_700"
+                android:layout_marginStart="10dp"
+                android:textSize="14sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvWork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/occupation"
+                        android:textColor="@color/teal_700"
+                        android:layout_marginStart="10dp"
+                        android:textSize="11sp"/>
+
+                    <TextView
+                        android:id="@+id/tvOccupation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/empty"
+                        android:textColor="@color/purple_200"
+                        android:layout_marginStart="10dp"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/base"
+                        android:textColor="@color/teal_700"
+                        android:layout_marginStart="10dp"
+                        android:textSize="11sp"/>
+
+                    <TextView
+                        android:id="@+id/tvBase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/empty"
+                        android:textColor="@color/purple_200"
+                        android:layout_marginStart="10dp"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvConnectionsLock"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/connections"
+                android:textColor="@color/purple_700"
+                android:layout_marginStart="10dp"
+                android:textSize="14sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvConnections"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/group_affiliation"
+                        android:textColor="@color/teal_700"
+                        android:layout_marginStart="10dp"
+                        android:textSize="11sp"/>
+
+                    <TextView
+                        android:id="@+id/tvGroupAffiliation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/empty"
+                        android:textColor="@color/purple_200"
+                        android:layout_marginStart="10dp"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/relatives"
+                        android:textColor="@color/teal_700"
+                        android:layout_marginStart="10dp"
+                        android:textSize="11sp"/>
+
+                    <TextView
+                        android:id="@+id/tvRelatives"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/empty"
+                        android:textColor="@color/purple_200"
+                        android:layout_marginStart="10dp"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>

@@ -8,9 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.norbert.superheroes.R
 import com.norbert.superheroes.data.model.SuperHero
+import com.norbert.superheroes.databinding.ItemSuperHeroSmallInfoBinding
 import com.squareup.picasso.Picasso
 
-class SuperHeroAdapter: RecyclerView.Adapter<SuperHeroAdapter.ViewHolder>() {
+class SuperHeroAdapter(private val onClickListener:(SuperHero) -> Unit): RecyclerView.Adapter<SuperHeroAdapter.ViewHolder>() {
 
     private var superHeroesList = mutableListOf<SuperHero>()
     private var noImage= "https://i.imgur.com/I9hD11N.jpg"
@@ -23,12 +24,13 @@ class SuperHeroAdapter: RecyclerView.Adapter<SuperHeroAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val superHero = superHeroesList[position]
-        holder.superheroName.text= superHero.name
+        holder.render(superHero, onClickListener)
+        /*holder.superheroName.text= superHero.name
         if (superHero.image.url.isNotEmpty()){
             Picasso.get().load(superHero.image.url).into(holder.superHeroImage)
         }else{
             Picasso.get().load(noImage).into(holder.superHeroImage)
-        }
+        }*/
 
     }
 
@@ -42,19 +44,21 @@ class SuperHeroAdapter: RecyclerView.Adapter<SuperHeroAdapter.ViewHolder>() {
         notifyDataSetChanged()
     }
 
-    fun addSuperHero(data: SuperHero){
-        superHeroesList.add(data)
-        notifyDataSetChanged()
-    }
-
-    fun addSuperHeroList(data: List<SuperHero>){
-        superHeroesList.addAll(data)
-        notifyDataSetChanged()
-    }
 
 
-    class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
-        val superHeroImage: ImageView = itemView.findViewById(R.id.ivSuperHeroImage)
-        val superheroName: TextView = itemView.findViewById(R.id.tvSuperHeroName)
+
+    class ViewHolder(view:View):RecyclerView.ViewHolder(view){
+
+        private val binding = ItemSuperHeroSmallInfoBinding.bind(view)
+
+        fun render(superHeroModel:SuperHero, onClickListener:(SuperHero) -> Unit){
+            binding.tvSuperHeroName.text= superHeroModel.name
+            Picasso.get().load(superHeroModel.image.url).into(binding.ivSuperHeroImage)
+            itemView.setOnClickListener {
+                onClickListener(superHeroModel)
+            }
+        }
+        //val superHeroImage: ImageView = itemView.findViewById(R.id.ivSuperHeroImage)
+        //val superheroName: TextView = itemView.findViewById(R.id.tvSuperHeroName)
     }
 }
