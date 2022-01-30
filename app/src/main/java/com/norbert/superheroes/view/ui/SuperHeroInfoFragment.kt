@@ -9,12 +9,9 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import com.norbert.superheroes.R
-import com.norbert.superheroes.data.model.Biography
-import com.norbert.superheroes.data.model.PowerStats
-import com.norbert.superheroes.data.model.SuperHero
+import com.norbert.superheroes.data.model.*
 import com.norbert.superheroes.databinding.FragmentSuperHeroInfoBinding
-import com.norbert.superheroes.viewmodel.BiographyViewModel
-import com.norbert.superheroes.viewmodel.PowerStatsViewModel
+import com.norbert.superheroes.viewmodel.*
 import com.squareup.picasso.Picasso
 
 
@@ -23,6 +20,9 @@ class SuperHeroInfoFragment : Fragment() {
     private lateinit var binding: FragmentSuperHeroInfoBinding
     private val biographyViewModel: BiographyViewModel by viewModels()
     private val powerStatsViewModel:PowerStatsViewModel by viewModels()
+    private val appearanceViewModel:AppearanceViewModel by viewModels()
+    private val workViewModel:WorkViewModel by viewModels()
+    private val connectionsViewModel:ConnectionsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,6 +44,9 @@ class SuperHeroInfoFragment : Fragment() {
 
         biographyViewModel.onCreate(id?:"")
         powerStatsViewModel.onCreate(id?:"")
+        appearanceViewModel.onCreate(id?:"")
+        workViewModel.onCreate(id?:"")
+        connectionsViewModel.onCreate(id?:"")
 
         biographyViewModel.biography.observe(this,{
             if(it!=null){
@@ -57,6 +60,43 @@ class SuperHeroInfoFragment : Fragment() {
             }
         })
 
+        appearanceViewModel.appearance.observe(this,{
+            if(it!=null){
+                updateAppearance(it)
+            }
+        })
+
+        workViewModel.work.observe(this,{
+            if(it!=null){
+                updateWork(it)
+            }
+        })
+
+        connectionsViewModel.connections.observe(this,{
+            if(it!=null){
+                updateConnections(it)
+            }
+        })
+
+    }
+
+    private fun updateConnections(connections: Connections) {
+        binding.tvGroupAffiliation.text = connections.groupAffiliation
+        binding.tvRelatives.text = connections.relatives
+    }
+
+    private fun updateWork(work: Work) {
+        binding.tvOccupation.text = work.occupation
+        binding.tvBase.text = work.base
+    }
+
+    private fun updateAppearance(appearance: Appearance) {
+        binding.tvGender.text = appearance.gender
+        binding.tvRace.text= appearance.race
+        binding.tvHeight.text = appearance.height.toString()
+        binding.tvWeight.text = appearance.weight.toString()
+        binding.tvEyeColor.text = appearance.eyeColor
+        binding.tvHairColor.text = appearance.hairColor
     }
 
     private fun updatePowerStats(powerStats: PowerStats) {
