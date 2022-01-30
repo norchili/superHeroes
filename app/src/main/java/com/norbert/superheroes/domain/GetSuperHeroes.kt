@@ -7,11 +7,15 @@ import com.norbert.superheroes.data.model.SuperHero
 class GetSuperHeroes {
     private val repository= SuperHeroRepository()
 
-    suspend operator fun invoke():List<SuperHero>{
+    suspend operator fun invoke(page: Int):List<SuperHero>{
 
         val superHeroList = mutableListOf<SuperHero>()
+        //Definimos los limites de la pagina
+        //Solicita 10 super heroes a la API
+        val start = (page - 1 ) * 10 + 1
+        val limit = page * 10
 
-        for (i in 1..10){
+        for (i in start..limit){
             try {
 
                 val response = repository.getSuperHeroById(i)

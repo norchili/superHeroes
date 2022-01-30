@@ -12,16 +12,15 @@ class SuperHeroViewModel: ViewModel() {
     val superHeroes= MutableLiveData<List<SuperHero>>()
     val isLoading = MutableLiveData<Boolean>()
 
-    fun onCreate(){
+    fun onCreate(page: Int){
         viewModelScope.launch {
             isLoading.postValue(true)
             val getSuperHeroes= GetSuperHeroes()
-            val superHeroesList = getSuperHeroes()
+            val superHeroesList = getSuperHeroes(page)
             if(!superHeroesList.isNullOrEmpty()){
                 superHeroes.postValue(superHeroesList)
                 isLoading.postValue(false)
 
-                //Resolver ya que si es nulo o esta vacio nunca se indicará que se deternga el loading progres
             }
 
 

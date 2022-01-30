@@ -25,12 +25,6 @@ class SuperHeroAdapter(private val onClickListener:(SuperHero) -> Unit): Recycle
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val superHero = superHeroesList[position]
         holder.render(superHero, onClickListener)
-        /*holder.superheroName.text= superHero.name
-        if (superHero.image.url.isNotEmpty()){
-            Picasso.get().load(superHero.image.url).into(holder.superHeroImage)
-        }else{
-            Picasso.get().load(noImage).into(holder.superHeroImage)
-        }*/
 
     }
 
