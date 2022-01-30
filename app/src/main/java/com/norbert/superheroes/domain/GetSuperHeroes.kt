@@ -11,7 +11,7 @@ class GetSuperHeroes {
 
         val superHeroList = mutableListOf<SuperHero>()
 
-        for (i in 1..100){
+        for (i in 1..5){
             try {
 
                 val response = repository.getSuperHeroById(i)
